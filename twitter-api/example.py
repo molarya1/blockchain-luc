@@ -5,15 +5,20 @@ import tweepy
 import mykey
 import math
 
+from os import environ
+CONSUMER_KEY = environ['CONSUMER_KEY']
+CONSUMER_SECRET = environ['CONSUMER_SECRET']
+ACCESS_KEY = environ['ACCESS_KEY']
+ACCESS_SECRET = environ['ACCESS_SECRET']
 
 from twitterbot import getbitcoin_price
 
 
 # Oauth keys
-CONSUMER_KEY = mykey.BOT_CONSUMER_KEY
-CONSUMER_SECRET = mykey.BOT_CONSUMER_SECRET
-ACCESS_KEY = mykey.BOT_ACCESS_KEY
-ACCESS_SECRET = mykey.BOT_ACCESS_SECRET
+#CONSUMER_KEY = mykey.BOT_CONSUMER_KEY
+#CONSUMER_SECRET = mykey.BOT_CONSUMER_SECRET
+#ACCESS_KEY = mykey.BOT_ACCESS_KEY
+#ACCESS_SECRET = mykey.BOT_ACCESS_SECRET
 
 # Authentication with Twitter
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
